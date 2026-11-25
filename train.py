@@ -73,7 +73,3 @@ for i in range(1, len(feature_names)):
 
 # Save the model (default format is binary .cbm)
 model.save_model("catboost_model.cbm")
-
-# Load the model later
-loaded_model = CatBoostRegressor()
-loaded_model.load_model("catboost_model.cbm")
