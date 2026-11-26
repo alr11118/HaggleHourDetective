@@ -28,6 +28,10 @@ python3 predict.py
 
 Predictions are saved to `predictions.csv`.
 
+## Resouces
+CatBoost Documentation: https://catboost.ai/docs/en/concepts/installation
+GeeksForGreeks Doc: https://www.geeksforgeeks.org/machine-learning/catboost-ml/
+
 ## Libraries
 
 - pandas

@@ -62,14 +62,15 @@ results = pd.DataFrame({
     "Predicted": predictions
 })
 
+# Reccord log error (actual model output)
 results["Log_Error"] = np.abs(
     np.log1p(results["Actual"]) -
     np.log1p(results["Predicted"])
 )
 
+# Make a results csv to inspect and analise
 results = results.join(X_val)
 results = results.sort_values("Log_Error", ascending=False)
-
 results.to_csv("results.csv", index=False)
 
 # Inspect features
@@ -92,9 +93,6 @@ feature_importances_and_names = feature_importances_and_names.sort_values(
 print("\nTop 20 Features:")
 print(feature_importances_and_names.head(20).to_string(index=False))
 
-for i in range(1, len(feature_names)):
-    #print(feature_names[i] + " ----> " + str(feature_importance[i]))
-    pass
-
 # Save the model (default format is binary .cbm)
 model.save_model("catboost_model.cbm")
+print("Model Saved!")
