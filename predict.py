@@ -3,7 +3,7 @@ import pandas as pd
 from catboost import CatBoostRegressor 
 
 # Load data
-test = pd.read_csv("fakeTest.csv")
+test = pd.read_csv("test.csv")
 
 # Reccord project Ids
 if "project_id" in test.columns:
